@@ -1,0 +1,103 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #7d7d7e; /* fundo branco */
+    color: #222;
+    min-height: 100vh;
+  }
+  
+  /* Cabeçalho */
+  header {
+    background-color: #222;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+  }
+  
+  header h1 {
+    margin-top: 1rem;
+  }
+  
+  header button {
+    position: absolute;
+    top: 10px;
+    padding: 8px 16px;
+    background-color: #d32f2f; /* vermelho */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+  }
+  
+  #goHomeBtn {
+    left: 10px;
+  }
+  
+  #logoutBtn {
+    right: 10px;
+  }
+  
+  header button:hover {
+    background-color: #b71c1c;
+  }
+  
+  /* Container principal */
+  .main-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem;
+    gap: 2rem;
+  }
+  
+  /* Seções com efeito de card */
+  .section {
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 1.5rem;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .section:hover {
+    transform: translateY(-10px); /* Levanta a seção */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
+  }
+  
+  .section h2 {
+    margin-bottom: 1rem;
+    color: #d32f2f;
+    text-align: center;
+  }
+  
+  /* Botões / Links */
+  .menu-button {
+    display: block;
+    width: 100%;
+    text-align: center;
+    background-color: #d32f2f;
+    color: white;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  .menu-button:hover {
+    background-color: #b71c1c;
+    transform: scale(1.05); /* Leve aumento no tamanho do botão */
+  }
+  

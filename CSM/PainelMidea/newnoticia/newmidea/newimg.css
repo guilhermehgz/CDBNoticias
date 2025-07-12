@@ -1,0 +1,209 @@
+/* ===========================
+   1. Reset Básico
+=========================== */
+* {
+    margin: 0; /* Remove todas as margens */
+    padding: 0; /* Remove todos os preenchimentos */
+    box-sizing: border-box; /* Garante que o tamanho inclua bordas e preenchimentos */
+}
+
+/* ===========================
+   2. Estrutura Geral
+=========================== */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #747171;
+    color: #000000;
+    margin: 0; /* Remove margens externas do body */
+    padding: 0; /* Remove preenchimentos internos do body */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    transition: all 0.3s ease;
+    
+}
+
+/* ===========================
+   3. Cabeçalho
+=========================== */
+.header {
+    background-color: #a50d0d;
+    color: #ffffff;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative; /* Define o contexto de posicionamento para o botão */
+}
+
+.site-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* Botão de Tema (Dark Mode) */
+.toggle-theme {
+    position: absolute; /* Posiciona o botão em relação ao elemento pai */
+    top: 10px; /* Distância do topo */
+    left: 10px; /* Distância da borda esquerda */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    background: linear-gradient(45deg, #362a18, #f44336); /* Gradiente de cores */
+    color: #fff; /* Cor do ícone */
+    border: none; /* Remove borda */
+    font-size: 1.5rem; /* Tamanho do ícone */
+    border-radius: 50%; /* Deixa o botão circular */
+    cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+    display: flex; /* Ativa o flexbox */
+    align-items: center; /* Centraliza o ícone verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+.toggle-theme:hover {
+    background: linear-gradient(45deg, #f44336, #ff9800); /* Inverte o gradiente ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o botão levemente */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estilo para o botão de login */
+.login-button {
+    position: absolute; /* Posiciona o botão em relação ao cabeçalho */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da borda direita */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #00000000; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+/* Efeito ao passar o mouse */
+.login-button:hover {
+    background-color: #136104; /* Fundo mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o botão */
+}
+
+/* ===========================
+   4. Navegação
+=========================== */
+nav {
+    background-color: #5a0505;
+    color: rgb(82, 10, 10);
+    padding: 10px 0;
+    width: 100%;
+}
+
+.nav-menu {
+    margin-top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: #ffffff;
+    color: #000000;
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+
+/* Modo Escuro */
+body.dark-mode {
+    --background-color: #121212;
+    --text-color: #e0e0e0;
+    --button-bg: #333;
+    --button-hover-bg: #555;
+    --input-border: #555;
+    --header-footer-bg: #1f1f1f; /* Cor de fundo para header e footer no modo escuro */
+    --header-footer-text: #e0e0e0; /* Cor do texto para header e footer no modo escuro */
+    --form-bg: #1f1f1f; /* Cor de fundo para o formulário no modo escuro */
+}
+
+form {
+    background-color: #ffffffc9;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.titulo{ 
+    font-size: 35px;
+    color: #136104;
+    text-align: center;
+    margin-top: 125px;
+
+}
+label {
+    font-size: 1.1rem;
+    color: #0e2872; /* Azul escuro */
+    margin-bottom: 10px;
+    display: block;
+}
+
+input[type="file"] {
+    display: inline-block;
+    margin: 10px 0;
+    padding: 8px;
+    border: 1px solid #01c2cf;
+    border-radius: 4px;
+    background-color: #ffffffa6;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #dc2626; /* Vermelho */
+    color: rgb(250, 250, 250);
+    border: none;
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b91c1c; /* Vermelho mais escuro */
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        font-size: 1rem;
+        padding: 10px 15px;
+    }
+}

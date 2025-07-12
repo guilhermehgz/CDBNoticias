@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload de Arquivos</title>
+    <link rel="stylesheet" href="newimg.css">
+   
+</head>
+<body>
+    <header class="header">
+        <h1 class="site-title">CDB Notícias</h1>
+        <a class="login-button" href="/CSM/login.html">Login</a>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="/cdbnoticias/index.html">Início</a></li>
+                <li><a class="nav-link" href="/cdbnoticias/pagnoticia/paginanoticias.html">Notícias</a></li>
+                <li><a class="nav-link" href="/loja/#">Loja</a></li>
+                <li><a class="nav-link" href="/gamesjava/games.html">Games</a></li>
+                <li><a class="nav-link" href="/#">Ferramentas</a></li>
+            </ul>
+        </nav>
+                </nav>
+               
+            </header>
+           
+            <button class="toggle-theme">☀️</button>
+    <div>
+        <h1 class="titulo">Upload de Fotos e Vídeos</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <label for="mediaFile">Selecione uma foto ou vídeo:</label>
+            <input type="file" name="mediaFile" id="mediaFile" accept="image/*, video/*" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+</body>
+<script src="newimg.js"></script>
+</html>
+

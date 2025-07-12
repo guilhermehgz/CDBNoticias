@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <meta name="description" content="CBDblog - Seu blog de notícias e vídeos">
+    <meta name="author" content="CBDblog">  
+    <meta name="keywords" content="blog, notícias, vídeos">
+    <meta name="robots" content="index, follow">
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+
+    <header class="header">
+        <h1 class="site-title">CDB Notícias</h1>
+        <a class="login-button" href="/CSM/login.html">Login</a>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li><a class="nav-link" href="/cdbnoticias/index.html">Início</a></li>
+                <li><a class="nav-link" href="/cdbnoticias/pagnoticia/paginanoticias.html">Notícias</a></li>
+                <li><a class="nav-link" href="/loja/#">Loja</a></li>
+                <li><a class="nav-link" href="/gamesjava/games.html">Games</a></li>
+                <li><a class="nav-link" href="/#">Ferramentas</a></li>
+            </ul>
+        </nav>
+                </nav>
+               
+            </header>
+           
+            <button class="toggle-theme">☀️</button>
+        
+    <form action="/news/new" method="POST">
+    <label for="content_title">Título</label><br>
+    <input type="text" id="content_title" name="content_title"><br><br>
+
+    <label for="description">Descrição:</label><br>
+    <input type="text" id="description" name="description"><br><br>
+
+    <label for="category">Categoria:</label><br>
+    <select id="category" name="category">
+        <option value="tecnologia">Tecnologia</option>
+        <option value="saude">Saúde</option>
+        <option value="esporte">Esporte</option>
+        <option value="entretenimento">Entretenimento</option>
+        <option value="educacao">Educação</option>
+        <option value="ciencia">Ciência</option>
+        <option value="politica">Política</option>
+        <option value="economia">Economia</option>
+        <option value="cultura">Cultura</option>
+        <option value="meio_ambiente">Meio Ambiente</option>
+        <option value="outros">Outros</option>
+    </select><br><br>
+
+    <label for="author">Autor:</label><br>
+    <input type="text" id="author" name="author"><br><br>
+
+    <label for="content">Conteúdo:</label><br>
+    <textarea id="content" name="content"></textarea><br><br>
+
+    <!-- Campo para a imagem de capa -->
+    <label>Escolha a origem da imagem de capa:</label><br>
+    <input type="radio" id="imageFileOptionCapa" name="imageOptionCapa" value="file" checked>
+    <label for="imageFileOptionCapa">Fazer upload de um arquivo</label><br>
+    <input type="radio" id="imageLinkOptionCapa" name="imageOptionCapa" value="link">
+    <label for="imageLinkOptionCapa">Usar um link</label><br><br>
+
+    <!-- Campo para upload de arquivo da capa -->
+    <div id="fileInputWrapperCapa">
+        <label for="imagem">Imagem de Capa:</label><br>
+        <input type="file" id="imagem" name="imagem"><br><br>
+    </div>
+
+    <!-- Campo para colar link da capa -->
+    <div id="linkInputWrapperCapa" style="display: none;">
+        <label for="imageLinkCapa">Link da imagem de capa:</label><br>
+        <input type="url" id="imageLinkCapa" name="imageLinkCapa" placeholder="https://exemplo.com/imagem.jpg"><br><br>
+    </div>
+
+    <!-- Escolha entre arquivo ou link para a imagem do conteúdo -->
+    <label>Escolha a origem da imagem do conteúdo:</label><br>
+    <input type="radio" id="imageFileOption" name="imageOption" value="file" checked>
+    <label for="imageFileOption">Fazer upload de um arquivo</label><br>
+    <input type="radio" id="imageLinkOption" name="imageOption" value="link">
+    <label for="imageLinkOption">Usar um link</label><br><br>
+
+    <!-- Campo para upload de arquivo -->
+    <div id="fileInputWrapper">
+        <label for="imagem2">Imagem do Conteúdo:</label><br>
+        <input type="file" id="imagem2" name="imagem2"><br><br>
+    </div>
+
+    <!-- Campo para colar link -->
+    <div id="linkInputWrapper" style="display: none;">
+        <label for="imageLink">Link da imagem do conteúdo:</label><br>
+        <input type="url" id="imageLink" name="imageLink" placeholder="https://exemplo.com/imagem.jpg"><br><br>
+    </div>
+
+    <button type="submit" name="action" value="download">Download HTML</button>
+    <button type="submit" name="action" value="publicar">Publicar</button>
+    <button type="submit" name="action" value="visualizar">Visualizar</button>
+    <button type="submit" name="action" value="excluir">Excluir</button>
+</form>
+
+<BR><BR><BR><BR><BR><BR><BR><BR><BR>
+  <footer class="footer">
+    <div class="footer-links">
+        <a href="#">Política de Privacidade</a> |
+        <a href="#">Termos de Uso</a> |
+        <a href="#">Sobre Nós</a>
+    </div>
+    <p>&copy; 2025 CDB Notícias. Todos os direitos reservados.</p>
+</footer> 
+
+<script src="new.js"></script>
+</body>
+</html>

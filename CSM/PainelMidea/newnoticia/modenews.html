@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="modenews.css"> 
+    <head {{category}}> </head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+</head>
+<body>
+
+    <header class="header">
+<h1 class="site-title">CDB Notícias</h1>
+<a class="login-button" href="#">Login</a>
+
+<nav>
+    <ul class="nav-menu">
+        <li><a class="nav-link" href="#">Início</a></li>
+        <li><a class="nav-link" href="#">Notícias</a></li>
+        <li><a class="nav-link" href="#">Loja</a></li>
+        <li><a class="nav-link" href="#">Games</a></li>
+        <li><a class="nav-link" href="#">Ferramentas</a></li>
+    </ul>
+</nav>
+        </nav>
+       
+    </header>
+    <div class="ad-horizontal">Anúncio Horizontal</div>
+    <button class="toggle-theme">☀️</button>
+
+    <main class="main-content">
+
+        <div class="content-wrapper">
+            <!-- Anúncio Lateral Esquerdo -->
+            <aside class="ad-side">
+                <div class="ad-vertical ad-vertical-left">Anúncio</div>
+            </aside>
+
+            <h2>{{title}}</h2>
+            <p class="article-date" style="text-align: center;">{{description}}</p>
+            
+            
+            <div class="article-text">
+                <!-- Imagem de Capa -->
+                <div class="cover-wrapper">
+                    <img class="capa" src="{{image}}" alt="Imagem de Capa">
+                </div>
+
+                <!-- Texto do Artigo -->
+                <p><strong>Autor:</strong> {{author}}</p>
+                <div>
+                    <p>{{content}}</p>
+                    
+                    
+                </div>
+            </div>
+
+            <!-- Anúncio Lateral Direito -->
+            <aside class="ad-side">
+                <div class="ad-vertical ad-vertical-right">Anúncio</div>
+            </aside>
+        </div>
+    </main>
+
+        <!-- Botões de Compartilhar -->
+        <div class="social-share">
+            <ul class="social-links">
+                <li>
+                    <a href="#" class="social-link" data-platform="twitter">
+                        <i class="fab fa-twitter"></i> <!-- Classe para o ícone do Twitter (X) -->
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="social-link" data-platform="Whatsapp">
+                        <i class="fab fa-whatsapp"></i> <!-- Classe para o ícone do WhatsApp -->
+                    </a>
+                </li>
+                <!-- Adicione outros links de compartilhamento aqui, seguindo o mesmo padrão -->
+            </ul>
+        </div>
+    
+<BR><BR>
+
+    <section> <h2> veja também </h2>
+        <section class="news-carousel">
+            <div class="news-grid-carousel"></div>
+     <!-- As notícias serão carregadas dinamicamente aqui pelo JavaScript -->
+    </section>
+    <BR><BR>
+    <footer class="footer">
+        <div class="footer-links">
+            <a href="#">Política de Privacidade</a> |
+            <a href="#">Termos de Uso</a> |
+            <a href="#">Sobre Nós</a>
+        </div>
+        <p>&copy; 2025 CDB Notícias. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="modenews.js"></script> <!-- Link para seu JavaScript -->
+</body>
+</html>

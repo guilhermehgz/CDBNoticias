@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Bem-vindo</title>
+  <link rel="stylesheet" href="centrodemidea.css"> <!-- Link para o CSS -->
+</head>
+<body>
+  <header>
+    <button id="goHomeBtn">Página Inicial</button>
+    <button id="logoutBtn">Sair</button>
+    <h1>Centro de Mídia</h1>
+  </header>
+
+  <div class="main-container">
+    <div class="section">
+      <h2>Gerenciar site</h2>
+      <a href="newnoticia/new.html" class="menu-button">Adicionar notícia</a>
+      <a href="editar-video.html" class="menu-button">Editar link de vídeo</a>
+          </div>
+
+    <div class="section">
+      <h2>Gerenciar Conteúdo</h2>
+      <a href="adicionar-video.html" class="menu-button">Adicionar vídeo</a>
+      <a href="adicionar-imagem.html" class="menu-button">Adicionar imagem</a>
+      
+    </div>
+
+    <div class="section">
+      <h2>Gerenciar Usuários</h2>
+      <a href="adicionar-usuario.html" class="menu-button">Adicionar usuário</a>
+      <a href="editar-usuario.html" class="menu-button">Editar usuário</a>
+      <a href="excluir-usuario.html" class="menu-button">Excluir usuário</a>
+      <a href="visualizar-usuario.html" class="menu-button">Visualizar usuário</a>
+    </div>
+  </div>
+
+  <script src="inicial.js"></script>
+  <script>
+    if (localStorage.getItem("loggedIn") !== "true") {
+      window.location.href = "../login.html";
+    }
+
+    function logout() {
+      localStorage.removeItem("loggedIn");
+      window.location.href = "../login.html";
+      location.reload();
+    }
+
+    function goHome() {
+      window.location.href = "/cdbnoticias/index.html";
+    }
+
+    document.getElementById("logoutBtn").addEventListener("click", logout);
+    document.getElementById("goHomeBtn").addEventListener("click", goHome);
+  </script>
+
+</body>
+</html>
