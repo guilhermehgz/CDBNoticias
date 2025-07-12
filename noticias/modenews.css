@@ -1,0 +1,496 @@
+/* ===========================
+   1. Reset Básico
+=========================== */
+* {
+    margin: 0; /* Remove todas as margens */
+    padding: 0; /* Remove todos os preenchimentos */
+    box-sizing: border-box; /* Garante que o tamanho inclua bordas e preenchimentos */
+}
+
+/* ===========================
+   2. Estrutura Geral
+=========================== */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #fffbfb;
+    color: #333;
+    margin: 0; /* Remove margens externas do body */
+    padding: 0; /* Remove preenchimentos internos do body */
+    overflow-x: hidden; /* Evita rolagem horizontal */
+    transition: all 0.3s ease;
+}
+
+/* ===========================
+   3. Cabeçalho
+=========================== */
+.header {
+    background-color: #a50d0d;
+    color: #ffffff;
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative; /* Define o contexto de posicionamento para o botão */
+}
+
+.site-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    letter-spacing: 1px;
+}
+
+/* Botão de Tema (Dark Mode) */
+.toggle-theme {
+    position: absolute; /* Posiciona o botão em relação ao elemento pai */
+    top: 10px; /* Distância do topo */
+    left: 10px; /* Distância da borda esquerda */
+    width: 40px; /* Largura do botão */
+    height: 40px; /* Altura do botão */
+    background: linear-gradient(45deg, #362a18, #f44336); /* Gradiente de cores */
+    color: #fff; /* Cor do ícone */
+    border: none; /* Remove borda */
+    font-size: 1.5rem; /* Tamanho do ícone */
+    border-radius: 50%; /* Deixa o botão circular */
+    cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+    display: flex; /* Ativa o flexbox */
+    align-items: center; /* Centraliza o ícone verticalmente */
+    justify-content: center; /* Centraliza o ícone horizontalmente */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+.toggle-theme:hover {
+    background: linear-gradient(45deg, #f44336, #ff9800); /* Inverte o gradiente ao passar o mouse */
+    transform: scale(1.1); /* Aumenta o botão levemente */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Estilo para o botão de login */
+.login-button {
+    position: absolute; /* Posiciona o botão em relação ao cabeçalho */
+    top: 10px; /* Distância do topo */
+    right: 10px; /* Distância da borda direita */
+    padding: 10px 20px; /* Espaçamento interno */
+    background-color: #00000000; /* Cor de fundo */
+    color: #ffffff; /* Cor do texto */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 1rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+}
+
+/* Efeito ao passar o mouse */
+.login-button:hover {
+    background-color: #136104; /* Fundo mais escuro ao passar o mouse */
+    transform: scale(1.05); /* Aumenta levemente o botão */
+}
+
+/* ===========================
+   4. Navegação
+=========================== */
+nav {
+    background-color: #800606;
+    color: white;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.nav-menu {
+    margin-top: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 20px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    background-color: #000;
+    color: #fdfdfd;
+    transform: scale(1.05);
+    text-decoration: underline;
+}
+
+/* ===========================
+   5. Conteúdo Principal
+=========================== */
+h2 {
+    font-size: 2rem;
+    margin: 1.5rem 0;
+    color: #109604; /* Cor do título */
+    text-align: center; /* Centraliza o título */
+}
+
+/* Estilo Geral do Artigo */
+.article-body {
+    max-width: 800px; /* Define uma largura máxima */
+    margin: 0 auto; /* Centraliza o artigo horizontalmente */
+    padding: 1.5rem; /* Adiciona espaçamento interno */
+    line-height: 1.8; /* Melhora a legibilidade */
+    color: #333; /* Cor do texto padrão */
+    background-color: #fff; /* Fundo branco no modo padrão */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    box-sizing: border-box; /* Inclui padding no cálculo da largura */
+}
+
+/* Estilo para os Parágrafos */
+.article-paragraph {
+    margin-bottom: 1rem; /* Espaçamento entre os parágrafos */
+    text-align: justify; /* Justifica o texto */
+    color: #333; /* Cor do texto padrão */
+}
+.article-text {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    line-height: 1.8; /* Altura da linha */
+    color: #000000; /* Cor do texto padrão */
+    text-align: justify; /* Justifica o texto */
+    margin: 1rem auto; /* Margem acima e abaixo, centraliza horizontalmente */
+    max-width: 800px; /* Largura máxima */
+    width: 100%; /* Largura total */
+    padding: 1rem; /* Espaçamento interno */
+    background-color: #f9f9f9; /* Fundo claro */
+    border-radius: 8px; /* Bordas arredondadas */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+/* Título do Artigo */
+.article-title {
+    font-size: 2rem; /* Tamanho do título */
+    font-weight: bold;
+    margin-bottom: 1rem;
+    text-align: left    ; /* Centraliza o título */
+    color: #109604; /* Cor do título */
+  
+}
+
+/* Imagens no Artigo */
+.content-image {
+    align-items: center; /* Centraliza a imagem */
+    width: 100%;
+    max-width: 600px; /* Ajusta a largura máxima */
+    height: auto; 
+    border-radius: 10px; /* Bordas arredondadas */
+    margin: 1rem auto; /* Centraliza as imagens */
+    display: block;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+}
+
+/* Contêiner da Imagem de Capa */
+.cover-wrapper {
+    max-width: 800px; /* Define a largura máxima */
+    margin: 0 auto; /* Centraliza o contêiner horizontalmente */
+    text-align: center; /* Centraliza o conteúdo dentro do contêiner */
+    padding: 1rem 0; /* Adiciona espaçamento acima e abaixo */
+}
+
+/* Estilo para a Imagem de Capa */
+.capa {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    max-width: 800px; /* Define a largura máxima da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    display: block; /* Garante que a imagem seja exibida como um bloco */
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+/* ===========================
+   *Botões de Compartilhar
+=========================== */
+/* Estilo para os ícones dentro dos links de compartilhamento */
+.social-link i,
+.social-link span {
+    margin-right: 8px; /* Espaço entre o ícone e o texto */
+    margin-top: 8px; /* Espaço acima do ícone */
+    margin-left: 9px; /* Espaço à esquerda do ícone */
+    vertical-align: middle; /* Alinha o ícone verticalmente com o texto */
+}
+
+/* Opcional: Ajustar o padding se necessário para acomodar o ícone */
+.social-link {
+    /* Mantém os estilos existentes */
+    padding: 0.7rem 1.2rem;
+    background-color: #000000;
+    color: #ff0000;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: inline-flex; /* Usa flexbox para alinhar ícone e texto */
+    align-items: center; /* Centraliza verticalmente os itens */
+    justify-content: center; /* Centraliza horizontalmente os itens */
+}
+
+.social-share {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+    display: inline-flex;
+    gap: 1rem; /* Espaçamento entre os botões */
+}
+
+.social-link {
+    padding: 0.7rem 1.2rem; /* Espaçamento interno */
+    background-color: #000000; /* Fundo azul */
+    color: #fff; /* Texto branco */
+    text-decoration: none; /* Remove sublinhado */
+    border-radius: 35px; /* Bordas arredondadas */
+    font-weight: bold; /* Negrito */
+    font-size: 1rem; /* Tamanho da fonte */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transições suaves */
+}
+
+.social-link:hover {
+    background-color: #02920e; /* Fundo mais escuro ao passar o mouse */
+    transform: scale(1.1); /* Aumenta levemente o botão */
+}
+
+/* ===========================
+   6. Anúncios
+=========================== */
+
+/* Estilo para os anúncios verticais em telas maiores */
+.ad-vertical {
+    position: fixed; /* Fixa o anúncio na tela */
+    top: 50%; /* Centraliza verticalmente */
+    transform: translateY(-50%); /* Ajusta para centralização exata */
+    width: 150px; /* Largura do anúncio */
+    height: 400px; /* Altura do anúncio */
+    background-color: #ccc; /* Cor de fundo */
+    border-radius: 10px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+    padding: 10px; /* Espaçamento interno */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Adiciona sombra */
+    font-size: 0.9rem; /* Tamanho da fonte */
+    color: #333; /* Cor do texto */
+    z-index: 1000; /* Garante que os anúncios fiquem acima de outros elementos */
+}
+
+/* Anúncio Lateral Esquerdo */
+.ad-vertical-left {
+    left: 10px; /* Posiciona próximo à borda esquerda */
+}
+
+/* Anúncio Lateral Direito */
+.ad-vertical-right {
+    right: 10px; /* Posiciona próximo à borda direita */
+}
+
+/* Anúncio Horizontal */
+.ad-horizontal {
+    position: relative; /* Garante que o anúncio siga o fluxo normal da página */
+    width: 100%; /* Ocupa toda a largura */
+    height: auto; /* Ajusta a altura ao conteúdo */
+    background-color: #383838; /* Cor de fundo */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 1rem; /* Espaçamento interno */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    margin: 1rem 0; /* Espaçamento acima e abaixo */
+}
+
+.ad-horizontal img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin: 0 auto;
+    display: block;
+}
+
+/* Anúncio Superior */
+.ad-top {
+    position: relative; /* Posiciona o anúncio logo após o header */
+    width: 100%; /* Ocupa toda a largura */
+    height: auto; /* Altura ajustável ao conteúdo do anúncio */
+    background-color: #414141; /* Cor de fundo padrão */
+    text-align: center; /* Centraliza o conteúdo */
+    padding: 1rem; /* Espaçamento interno */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra para destaque */
+    margin-bottom: 1rem; /* Espaçamento inferior */
+}
+
+.ad-top ins.adsbygoogle {
+    display: block; /* Garante que o anúncio ocupe o espaço necessário */
+    margin: 0 auto; /* Centraliza o anúncio */
+}
+
+/* ===========================
+   7. Rodapé
+=========================== */
+.footer {
+    background-color: #970d0d;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.footer-links a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 0.5rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus {
+    color: #ffc107;
+    text-decoration: underline;
+}
+
+/* ===========================
+   8. Botão de Tema
+=========================== */
+.toggle-theme {
+    align-items: absolute; /* Alinha o botão à direita */   
+    left: 200px; /* Define a distância da borda esquerda */
+    transform: translateY(-50%); /* Ajusta para centralizar verticalmente */
+    padding: 0.8rem 1rem; /* Espaçamento interno */
+    background: linear-gradient(45deg, #000000, #61510b); /* Gradiente de cores */
+    color: #fff; /* Cor do texto */
+    border: none; /* Remove borda */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    font-weight: bold; /* Negrito no texto */
+    border-radius: 10px; /* Deixa o botão com bordas arredondadas */
+    cursor: pointer; /* Mostra o cursor de ponteiro ao passar o mouse */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Adiciona sombra */
+    transition: background 0.3s, transform 0.3s, box-shadow 0.3s; /* Transições suaves */
+    
+}
+
+.toggle-theme:hover {
+    background: linear-gradient(45deg, #ad0f03, #ff7300); /* Inverte o gradiente ao passar o mouse */
+    transform: translateY(-50%) scale(1.1); /* Aumenta o botão levemente */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* ===========================
+   9. Modo Escuro
+=========================== */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+ }
+body.dark-mode h2 {
+    color: cyan; /* Define uma cor destacada para o modo escuro */
+}
+body.dark-mode .header,
+body.dark-mode .footer {
+    background-color: #000000;
+}
+
+body.dark-mode .nav-link {
+    color: #ffffff;
+      
+}
+
+body.dark-mode .article-body,
+body.dark-mode .article-paragraph {
+    background-color: #1f1e1e;
+    color: #e0e0e0;
+}
+body.dark-mode .ad-vertical,
+body.dark-mode .ad-horizontal {
+    background-color: #3a3939;
+}
+
+body.dark-mode .toggle-theme {
+    background-color: #8b0000;
+    color: #e0e0e0;
+
+}
+
+/* Modo Escuro para .article-text */
+body.dark-mode .article-text {
+    background-color: #1f1f1f !important; /* Fundo escuro */
+    color: #e0e0e0 !important; /* Texto claro */
+    border-radius: 10px; /* Bordas arredondadas */
+    padding: 1rem; /* Espaçamento interno */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra mais escura */
+}
+
+/* Modo Escuro para Imagens dentro de .article-text */
+body.dark-mode .article-text img {
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Sombra mais escura */
+}
+
+/* Modo Escuro para Parágrafos dentro de .article-text */
+body.dark-mode .article-text p {
+    color: #e0e0e0 !important; /* Texto claro */
+    text-align: justify; /* Justifica o texto */
+    margin-bottom: 1rem; /* Espaçamento entre parágrafos */
+}
+
+/* ===========================
+   10. Responsividade
+=========================== */
+@media (max-width: 768px) {
+    .layout-columns {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .ad-vertical {
+        position: relative; /* Faz o anúncio seguir o fluxo do texto */
+        transform: none; /* Remove a transformação */
+        width: auto; /* Ajusta a largura automaticamente */
+        height: auto; /* Ajusta a altura automaticamente */
+        margin: 1rem auto; /* Adiciona espaçamento acima e abaixo e centraliza */
+        display: block; /* Garante que o anúncio seja exibido como bloco */
+    }
+
+    .ad-vertical-left,
+    .ad-vertical-right {
+        margin: 1rem auto; /* Centraliza os anúncios horizontalmente */
+    }
+
+    .cover-image {
+        max-width: 100%;
+    }
+
+    .article-body {
+        max-width: 100%; /* Remove a largura máxima em telas menores */
+        padding: 1rem; /* Ajusta o espaçamento interno */
+        margin: 0 1rem; /* Adiciona margens laterais */
+    }
+
+    .article-paragraph {
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+    }
+
+    .article-title {
+        font-size: 1.5rem; /* Reduz o tamanho do título */
+    }
+
+    .article-section {
+        max-width: 100%; /* Remove a largura máxima fixa */
+        padding: 0.8rem; /* Reduz o espaçamento interno */
+        margin: 0 1rem; /* Adiciona margens laterais menores */
+    }
+}
